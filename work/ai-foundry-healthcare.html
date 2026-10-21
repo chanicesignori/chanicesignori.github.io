@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Locking down AI Foundry so patient data never leaves the network · Chanice Signori</title>
+<meta name="description" content="A fully isolated Azure AI Foundry platform behind an API Management governance gateway for a regional health system.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<header class="hero case">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="../">chanice<span class="acc">.</span>signori</a>
+      <div class="pills"><a href="../#work">Work</a><a href="../#skills">Skills</a><a href="../#contact">Contact</a></div>
+    </nav>
+    <div class="hero-body" style="padding-block:28px 48px;gap:16px">
+      <a class="crumb" href="../#work">← selected_work / case study · healthcare</a>
+      <h1>Locking down AI Foundry so patient data never leaves the network</h1>
+      <div class="tags"><span class="tag">ai-foundry</span><span class="tag">apim</span><span class="tag">private-endpoints</span><span class="tag">hipaa</span></div>
+    </div>
+  </div>
+</header>
+<main>
+  <section>
+    <div class="wrap" style="display:grid;gap:28px">
+      <div class="bento">
+        <div class="tile"><span class="mono">the_ask</span><p style="color:var(--ink)">Let application and AI teams at a regional health system build on generative AI without exposing anything to the public internet.</p></div>
+        <div class="tile" style="background:var(--sage-soft);border-color:var(--sage-line)"><span class="mono" style="color:#3D5A45">the_result</span><p style="color:var(--ink)">A BAA-covered AI platform teams now build on, plus a written secure-deployment pattern for every AI service that follows.</p></div>
+      </div>
+      <div style="display:grid;gap:12px"><span class="mono" style="color:var(--muted)">how_it_works/</span><div class="flow"><span class="node">apps</span><span aria-hidden="true">→</span><span class="node">apim gateway<small>auth · limits · token logs</small></span><span aria-hidden="true">→</span><span class="node">private endpoint<small>no public ingress</small></span><span aria-hidden="true">→</span><span class="node dark">ai foundry<small>default-deny egress</small></span></div></div>
+      <article class="prose">
+<h2>The constraint</h2>
+<p>Healthcare data can't take shortcuts. Teams wanted to experiment with generative AI, but anything that touched protected health information had to stay on private networks, be fully auditable, and sit under the organization's Business Associate Agreement (BAA).</p>
+<h2>What I built</h2>
+<ul>
+<li><strong>Private ingress only.</strong> Azure AI Foundry is reachable solely through private endpoints, with no public network access.</li>
+<li><strong>Default-deny egress.</strong> Outbound traffic is blocked unless it goes to an approved internal resource.</li>
+<li><strong>One front door.</strong> Azure API Management sits in front as the governance gateway, handling authentication, rate limiting, and token usage monitoring.</li>
+<li><strong>A pattern, not a one-off.</strong> I documented the secure deployment pattern for AI services so the next one starts locked down instead of being retrofitted.</li>
+</ul>
+<h2>Outcome</h2>
+<p>Application development and AI teams now build on the platform, covered by the BAA, with usage visible and governed from a single gateway.</p>
+</article>
+      <div class="next"><a class="crumb" style="color:var(--forest)" href="../#work">← All work</a><a class="crumb" style="color:var(--forest)" href="../#contact">Get in touch →</a></div>
+    </div>
+  </section>
+</main>
+<footer class="wrap">© 2026 Chanice Signori · Shared without client names or internal details.</footer>
+</body>
+</html>
