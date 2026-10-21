@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>{% if page.title %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }} · Cloud Security Engineer{% endif %}</title>
+<meta name="description" content="{{ page.summary | default: site.description | strip_html | escape }}">
+<meta property="og:title" content="{{ page.title | default: site.title | escape }}">
+<meta property="og:description" content="{{ page.summary | default: site.tagline | escape }}">
+<meta property="og:image" content="{{ site.url }}/assets/headshot.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
+</head>
+<body>
+{{ content }}
+<footer class="wrap">© {{ site.time | date: "%Y" }} Chanice Signori · Shared without client names or internal details.</footer>
+</body>
+</html>

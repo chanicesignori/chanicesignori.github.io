@@ -1,0 +1,39 @@
+# Edit this file to change the Skills section on the home page.
+groups:
+  - label: ship it solo
+    items:
+      - Azure AI Foundry (secure deployment)
+      - API Management as an AI gateway
+      - Azure AI Search
+      - Private endpoints and Private Link DNS
+      - Hub-and-spoke network design
+      - Managed identity and least-privilege RBAC
+      - Bicep / ARM
+      - Logic Apps and UiPath automation
+      - Azure Container Apps
+  - label: strong, still sharpening
+    items:
+      - MCP server development
+      - Defender for Cloud (CSPM and workload protection)
+      - Terraform and Azure DevOps pipelines
+      - KQL
+      - HIPAA security controls
+  - label: learning now
+    items:
+      - Cloud vulnerability remediation
+      - Kubernetes / AKS security
+      - Google Cloud security
+
+certifications:
+  - Azure Solutions Architect Expert
+  - Azure AI Cloud Developer Associate
+  - Azure Security Engineer Associate
+  - Azure Administrator Associate
+  - CompTIA SecurityX (CASP+)
+  - AWS Cloud Practitioner
+
+worked_with:
+  - Inspira Financial
+  - Health First
+  - PwC
+  - Compuquip

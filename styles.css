@@ -99,3 +99,12 @@ footer{padding-block:24px;font-size:13px;opacity:.6}
   section{padding-block:40px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+/* odd tile out fills the row */
+.bento:has(> .big) > .tile:last-child:nth-child(even),
+.bento:not(:has(> .big)) > .tile:last-child:nth-child(odd){grid-column:1/-1}
+.prose code{font-family:var(--mono);font-size:.9em;background:rgba(31,51,40,.07);padding:1px 5px;border-radius:5px}
+.prose pre{background:var(--forest);color:var(--on-forest);padding:16px;border-radius:12px;overflow-x:auto}
+.prose pre code{background:none;padding:0;color:inherit}
+.prose img{border-radius:12px}
+.prose a{color:var(--forest-2)}

@@ -1,0 +1,27 @@
+title: Chanice Signori
+tagline: Secure cloud and AI platforms for regulated industries.
+description: Chanice Signori builds secure cloud and AI platforms on Azure for regulated industries — private networking, least-privilege identity, and HIPAA-ready AI services.
+url: https://chanicesignori.github.io
+email: signori.chanice@gmail.com
+linkedin: https://www.linkedin.com/in/chanicesignori/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+# Every write-up lives in the _work folder. One Markdown file = one page.
+collections:
+  work:
+    output: true
+    permalink: /work/:name.html
+
+defaults:
+  - scope:
+      path: ""
+      type: work
+    values:
+      layout: entry
+
+exclude:
+  - README.md
+  - TEMPLATE.md

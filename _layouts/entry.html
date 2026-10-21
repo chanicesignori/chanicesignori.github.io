@@ -1,0 +1,34 @@
+---
+layout: default
+---
+<header class="hero case">
+  <div class="wrap">
+    {% include nav.html %}
+    <div class="hero-body" style="padding-block:28px 48px;gap:16px">
+      <a class="crumb" href="{{ '/#work' | relative_url }}">← selected_work / {{ page.kind | default: "case study" }}{% if page.topic %} · {{ page.topic }}{% endif %}</a>
+      <h1>{{ page.title }}</h1>
+      {% if page.tags %}<div class="tags">{% for t in page.tags %}<span class="tag">{{ t }}</span>{% endfor %}</div>{% endif %}
+    </div>
+  </div>
+</header>
+<main>
+  <section>
+    <div class="wrap" style="display:grid;gap:28px">
+      {% if page.ask or page.result %}
+      <div class="bento">
+        {% if page.ask %}<div class="tile"><span class="mono">the_ask</span><p style="color:var(--ink)">{{ page.ask }}</p></div>{% endif %}
+        {% if page.result %}<div class="tile" style="background:var(--sage-soft);border-color:var(--sage-line)"><span class="mono" style="color:#3D5A45">the_result</span><p style="color:var(--ink)">{{ page.result }}</p></div>{% endif %}
+      </div>
+      {% endif %}
+      {% if page.flow %}
+      <div style="display:grid;gap:12px"><span class="mono" style="color:var(--muted)">how_it_works/</span>
+        <div class="flow">{% for step in page.flow %}<span class="node{% if forloop.last %} dark{% endif %}">{{ step.name }}{% if step.note %}<small>{{ step.note }}</small>{% endif %}</span>{% unless forloop.last %}<span aria-hidden="true">→</span>{% endunless %}{% endfor %}</div>
+      </div>
+      {% endif %}
+      <article class="prose">
+{{ content }}
+      </article>
+      <div class="next"><a class="crumb" style="color:var(--forest)" href="{{ '/#work' | relative_url }}">← All work</a><a class="crumb" style="color:var(--forest)" href="{{ '/#contact' | relative_url }}">Get in touch →</a></div>
+    </div>
+  </section>
+</main>
